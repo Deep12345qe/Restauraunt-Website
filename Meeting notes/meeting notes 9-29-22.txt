@@ -1,0 +1,10 @@
+11:02 - payment method finalization
+- use cases
+	- Owner administrator
+	- Head line cook
+	- customer user - 2 versions
+update on trello
+Narrative has to support the use cases
+Report1-v3 with all the requested edits applied
+Sections 3.c
+	
