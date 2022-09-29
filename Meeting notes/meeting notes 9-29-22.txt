@@ -1,10 +1,12 @@
 11:02 - payment method finalization
 - use cases
 	- Owner administrator
-	- Head line cook
-	- customer user - 2 versions
-update on trello
-Narrative has to support the use cases
-Report1-v3 with all the requested edits applied
+	- Head line cook or other delegated task member
+	- customer user - 2 versions take out and Dine-in
+11:08 - update on trello
+11:12- Narrative has to support the use cases
+11:15 Report1-v3 with all the requested edits applied
 Sections 3.c
+11:15 - Clarify the use of Github. Github desktop app seemed to be the simplest method.
+Command line control is different for all users.
 	
