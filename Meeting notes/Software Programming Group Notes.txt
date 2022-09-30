@@ -1,0 +1,24 @@
+(9-27)
+software engineer-minute taker
+customer- ability to recieve orders.
+have check out system.
+save orders to cart.
+administrator able to add delete or update the menu and other users.
+we need to define the administrator and customer, since both are users.
+payment method we can link to square or something like that.
+we do not need to worry about in house payment method. 
+Dine in has to pay after, so we can implement tab system. 
+log in as guest or user. 
+System requirementts-html, css, javascript.
+on the proposal, how we can fix the problem for dine in payment method or change the proposal on report.
+Find out what PW is. 
+dine in and online order all in the same system. 
+another object- an option for dine or to go. if dine in pay later, if to go, pay now. 
+To do- we need to update trello. Artistic design of the website. 
+update diagrams to match all above. update the narrative and the use cases, which means updating the matrix. 
+Whenever we have time to work on it, we need to do it. 
+
+need to commit to end up in github. 
+with the use case diagram, we need use case scenarios(narrative). have use case first, then diagram, then matrix. Pw the weight of the use
+	case. check on numbering on report. create a document for meeting minutes and contributions. refine the analysis object model.
+When you come up w a use case update it on trello. 	
