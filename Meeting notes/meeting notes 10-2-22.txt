@@ -1,0 +1,9 @@
+-Addressing Dr. Hatem comments
+	- fix object analysis model - done
+	- Deep contribution - will be done
+	- recorded meetings - done
+	- Expand use cases to match requirements 
+	- update diagrams to match use cases - Russel has contributed, requests verification from team members
+
+Deep requests some tasks be left to him
+How to deal with backing up the database - external hardrive? - will talk with Dr. Hatem.
