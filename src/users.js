@@ -20,11 +20,21 @@
 // russ.passwd();
 
 class Users {
-    constructor(name, email, password){
+    constructor(name, password, date, email){
         this.name = name;
+        this.password = password;
+        this.date = date;
         this.email = email;
-        this.password =password;
     }
 
-}
+    //method1() {}
+    //method2() {}
 
+}
+//Admin and owner
+class AdminUser extends Users{
+    constructor(name, password, date, email) {
+        super(name, password, date, email)
+        this.role = 'Administrator'
+    }
+} 
