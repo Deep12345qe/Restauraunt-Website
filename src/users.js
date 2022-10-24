@@ -30,11 +30,31 @@ class Users {
     //method1() {}
     //method2() {}
 
+    //getters
+    get name() {
+        return this.name;
+    }
+
+    get password() {
+        return this.password;
+    }
+
+    get email() {
+        return this.email;
+    }
+
+    //setters
+    set password(newPassword) {
+        this.password = newPassword;
+    }
+
 }
 //Admin and owner
 class AdminUser extends Users{
-    constructor(name, password, date, email) {
+    constructor(name, password, date, email, admin) {
         super(name, password, date, email)
-        this.role = 'Administrator'
+        this.role = admin;
     }
 } 
+
+const newUser = new Users();
