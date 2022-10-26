@@ -1,0 +1,12 @@
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+    var myMenu = new Menu();
+
+    myMenu.addMenuItem("my menu item A");
+    myMenu.addMenuItem("my menu item B");
+    myMenu.addMenuItem("my menu item C");
+    myMenu.addMenuItem("my menu item D");
+
+    myMenu.writeMenus();
+//-->
+</SCRIPT>
