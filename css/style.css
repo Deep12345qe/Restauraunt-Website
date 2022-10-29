@@ -1,0 +1,57 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+#hero {
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.1)),
+    url('https://cdn.pixabay.com/photo/2017/06/29/20/09/mexican-2456038__340.jpg');
+   height: 600px;
+   background-size: cover;
+   color: #fff;
+}
+
+#hero h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+  font-weight: 700;
+}
+
+.content {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 100px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.content button {
+  font-size: 2rem;
+  color: #fff;
+  background-color: #2f70d8;
+  border: none;
+  padding: .5rem 2rem;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.content button:hover {
+  background-color: #08347a;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
