@@ -1,0 +1,44 @@
+{
+    "name": "Enchiladas",
+    "type": "Entree",
+    "price": "5.00",
+    "calorie": "280",
+    "side": ["rice", "salad", "beans"],
+    "qty": 3
+}
+
+{
+    "name": "Chile Verde",
+    "type": "Entree",
+    "price": "6.00",
+    "calorie": "380",
+    "side": ["rice", "salad", "beans", "tortillas"],
+    "qty": 1
+}
+
+{
+    "name": "Chicken Fajitas",
+    "type": "Entree",
+    "price": "6.00",
+    "calorie": "370",
+    "side": ["grilled onion", "red and green peppers", "salad", "rice"],
+    "qty": 1
+}
+
+{
+    "name": "Super Burrito",
+    "type": "Entree",
+    "price": "6.00",
+    "calorie": "370",
+    "side": ["guacamole", "chease", "sour cream", "pico de gallo"],
+    "qty": 1
+}
+
+{
+    "name": "Taco",
+    "type": "Entree",
+    "price": "6.00",
+    "calorie": "370",
+    "side": ["onion toppings", "cilantro", "salsa", "lemon"],
+    "qty": 3
+}
