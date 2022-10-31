@@ -1,44 +1,244 @@
 {
-    "name": "Enchiladas",
-    "type": "Entree",
-    "price": "5.00",
-    "calorie": "280",
-    "side": ["rice", "salad", "beans"],
-    "qty": 3
-}
+    "food": [
+        {
+            "name": "Enchiladas",
+            "type": "Entree",
+            "price": 5.00,
+            "calorie": 280,            
+            "qty": 3,
+            "image": 
+            "description": {
+                "side": ["rice", "salad", "beans"],
+                "flavor": "N/A"
+            }
+        },
 
-{
-    "name": "Chile Verde",
-    "type": "Entree",
-    "price": "6.00",
-    "calorie": "380",
-    "side": ["rice", "salad", "beans", "tortillas"],
-    "qty": 1
-}
+        {
+            "name": "Chile Verde",
+            "type": "Entree",
+            "price": 6.00,
+            "calorie": 380,            
+            "qty": 1,
+            "description": {
+                "side": ["rice", "salad", "beans", "tortillas"],
+                "flavor": "N/A"
+            }
+        },
 
-{
-    "name": "Chicken Fajitas",
-    "type": "Entree",
-    "price": "6.00",
-    "calorie": "370",
-    "side": ["grilled onion", "red and green peppers", "salad", "rice"],
-    "qty": 1
-}
+        {
+            "name": "Chicken Fajitas",
+            "type": "Entree",
+            "price": 6.00,
+            "calorie": 370,            
+            "qty": 1,
+            "description": {
+                "side": ["grilled onion", "red and green peppers", "salad", "rice"],
+                "flavor": "N/A"
+            }
+        },
 
-{
-    "name": "Super Burrito",
-    "type": "Entree",
-    "price": "6.00",
-    "calorie": "370",
-    "side": ["guacamole", "chease", "sour cream", "pico de gallo"],
-    "qty": 1
-}
+        {
+            "name": "Super Burrito",
+            "type": "Entree",
+            "price": 6.00,
+            "calorie": 370,            
+            "qty": 1,
+            "description": {
+                "side": ["guacamole", "chease", "sour cream", "pico de gallo"],
+                "flavor": "N/A"
+            }
+        },
 
-{
-    "name": "Taco",
-    "type": "Entree",
-    "price": "6.00",
-    "calorie": "370",
-    "side": ["onion toppings", "cilantro", "salsa", "lemon"],
-    "qty": 3
+        {
+            "name": "Tacos",
+            "type": "Entree",
+            "price": 6.00,
+            "calorie": 370,
+            "qty": 3,
+            "description": {
+                "side": ["onion toppings", "cilantro", "salsa", "lemon"],
+                "flavor": "N/A"
+            }
+        },
+
+        {
+            "name": "Nachos",
+            "type": "Appetizer",
+            "price": 3.00,
+            "calorie": 260,            
+            "qty": "N/A",
+            "description": {
+                "side": ["melted cheese", "sour cream", "guacamole", "pico de gallo"],
+                "flavor": "N/A"
+            }
+        },
+
+        {
+            "name": "Guacamole Dip",
+            "type": "Appetizer",
+            "price": 3.00,
+            "calorie": 260,            
+            "qty": "N/A",
+            "description": {
+                "side": ["Tortilla chips"],
+                "flavor": "N/A"
+            }
+        },
+
+        {
+            "name": "Taquiitos",
+            "type": "Appetizer",
+            "price": 3.00,
+            "calorie": 260,            
+            "qty": 3,
+            "description": {
+                "side": ["refried beans", "sour cream", "vegies", "queso fresco"],
+                "flavor": "N/A"
+            }
+        },
+
+        {
+            "name": "Tostada de ceviche",
+            "type": "Appetizer",
+            "price": 3.00,
+            "calorie": 260,            
+            "qty": "N/A",
+            "description": {
+                "side": ["Choice of fish or shrimp"],
+                "flavor": "N/A"
+            }
+        },
+
+        {
+            "name": "Fried Moarella",
+            "type": "Appetizer",
+            "price": 3.00,
+            "calorie": 260,            
+            "qty": "N/A",
+            "description": {
+                "side": ["marinara sauce"],
+                "flavor": "N/A"
+            }
+        },
+
+        {
+            "name": "Churros",
+            "type": "Dessert",
+            "price": 4.00,
+            "calorie": 360,
+            "qty": 3,
+            "description": {
+                "side": ["homemade"],
+                "flavor": "N/A"
+            }
+        },
+
+        {
+            "name": "Cheesecake",
+            "type": "Dessert",
+            "price": 4.00,
+            "calorie": 360,
+            "qty": "N/A",
+            "description": {
+                "side": ["homemade"],
+                "flavor": "N/A"
+            }
+        },
+
+        {
+            "name": "Flan",
+            "type": "Dessert",
+            "price": 4.00,
+            "calorie": 360,
+            "qty": "N/A",
+            "description": {
+                "side": ["homemade"],
+                "flavor": "N/A"
+            }
+        },
+
+        {
+            "name": "Shakes",
+            "type": "Dessert",
+            "price": 4.00,
+            "calorie": 360,            
+            "qty": "N/A",
+            "description": {
+                "side": "N/A",
+                "flavor": ["vanilla", "chocolate"]
+            }
+        },
+
+        {
+            "name": "Molten Chocolate",
+            "type": "Dessert",
+            "price": 4.00,
+            "calorie": 360,            
+            "qty": "N/A",
+            "description": {
+                "side": ["Topped with vanilla icecream"],
+                "flavor": "N/A"
+            }
+        },
+        
+        {
+            "name": "Jarritos",
+            "type": "Drinks",
+            "price": 2.00,
+            "calorie": 120,            
+            "qty": 1,
+            "description": {
+                "side": "N/A",
+                "flavor": ["Fresa", "Tamarindo", "Mango", "Mandarina",  "Toronja", "Pineapple"]
+            }
+        },
+
+        {
+            "name": "Soda",
+            "type": "Drinks",
+            "price": 2.00,
+            "calorie": 120,            
+            "qty": 1,
+            "description": {
+                "side": "N/A",
+                "flavor": ["Various"]
+            }
+        },
+
+        {
+            "name": "Aqua Fresca",
+            "type": "Drinks",
+            "price": 3.00,
+            "calorie": 120,            
+            "qty": 1,
+            "description": {
+                "side": ["New daily"],
+                "flavor": "N/A"
+            }
+        },
+
+        {
+            "name": "Lemonade",
+            "type": "Drinks",
+            "price": 2.00,
+            "calorie": 120,            
+            "qty": 1,
+            "description": {
+                "side": "N/A",
+                "flavor": ["Strawberry", "Peach"]
+            }
+        },
+
+        {
+            "name": "Horchata",
+            "type": "Drinks",
+            "price": 2.00,
+            "calorie": 120,            
+            "qty": 1,
+            "description": {
+                "side": "N/A",
+                "flavor": [""]
+            }
+        }
+    ]
 }

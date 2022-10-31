@@ -1,3 +1,11 @@
+$cardHt: 17rem;
+$cardWd: 15rem;
+$cardHeaderHt: 3rem;
+$cardFooterHt: 3rem;
+$textColor: rgba(0,0,0,0.6);
+$rowHt: 3rem;
+$boxShadow: 0 0.1rem 0.3rem rgba(0,0,0,0.3);
+
 body {
     padding:0px;
     margin:0;
@@ -214,8 +222,8 @@ header#mainHeader {
 }
 .swiper-container {
     width: 600px;
-    height: 300px;
-    margin: 40px auto;
+    height: 450px;
+    margin: 30px auto;
     
     .swiper-wrapper {
       
@@ -238,6 +246,147 @@ header#mainHeader {
           font-size: 3vw;
           
         }
+
+
+		  .card {
+			width: $cardHt;
+			height: $cardWd;
+			//background:var(--card-background-color);
+			box-shadow: $boxShadow;
+			border-radius:0.5rem;
+			overflow:hidden;
+			transition:all 0.1s;
+			margin:1rem;
+		  }
+		  
+		  .card-header {
+			height: $cardHeaderHt;
+			display:flex;
+			font-weight:bold;
+			justify-content:center;
+			align-items:center;
+			z-index:110;
+			position:relative;
+			background:#fff;
+		  }
+		  
+		  .card-footer {
+			box-shadow:0 0 1rem;
+			border-top:1px dashed #fff;
+			background:#fff;
+		  }
+		  
+		  .card:hover {
+			transform:translateY(-1rem);
+		  }
+		  
+		  .card:hover .card-buttons {
+			opacity:1;
+			transform:translateY(0);
+		  }
+		  
+		  .card-body {
+			flex:1;
+			position:relative;
+		  }
+		  
+		  img {
+			width:100%;
+			object-fit:cover;
+			display:block;
+		  }
+		  
+		  .card-columns {
+			display:flex;
+			height: $rowHt;
+		  }
+		  
+		  .card-columns > * {
+			display:flex;
+			flex:1;
+			align-items:center;
+			padding:0 1rem;
+		  }
+		  
+		  .card-buttons {
+			z-index: 105;
+			opacity:0;
+			position:absolute;
+			bottom:0;
+			height: $rowHt;
+			width:100%;
+			transform:translateY(3.5rem);
+		  }
+		  
+		  .card.active .card-buttons {
+			transform:translateY(0);
+			opacity:1;
+		  }
+		  
+		  .card-button {
+			position:absolute;
+			width:2rem;
+			height:2rem;
+			border-radius:50%;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			color:#fff;
+			cursor:pointer;
+			z-index:106;
+			box-shadow: $boxShadow;
+			font-size:150%;
+		  }
+		  
+		  .card-button:hover {
+			transform:scale(1.3);
+		  }
+		  
+		  .order-button {
+			bottom:1rem;
+			right:1rem;
+			background:rgba(20,200,40, 1);
+		  }
+		  
+		  .order-button-label {
+			background:rgba(0,0,0,0.75);
+			right:1rem;
+			width:4.5rem;
+			border-radius:1rem;
+			z-index:100;
+			display:flex;
+			align-items:center;
+			justify-content:flex-start;
+			padding-left:1rem;
+			position:absolute;
+			height:2rem;
+			color:#fff;
+		  }
+		  
+		  .card:not(.active) .order-button-label {
+			display:none;
+		  }
+		  
+		  .info-button {
+			bottom:1rem;
+			left:1rem;
+			background:rgba(20,80,200,1);
+		  }
+		  
+		  .text-left {
+			text-align:left;
+			justify-content:flex-start;
+		  }
+		  
+		  .text-center {
+			text-align:center;
+			justify-content:center;
+		  }
+		  
+		  .text-right {
+			text-align:right;
+			justify-content:flex-end;
+		  }
       }
     }
 }
