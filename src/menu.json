@@ -86,7 +86,7 @@
         },
 
         {
-            "name": "Taquiitos",
+            "name": "Taquitos",
             "type": "Appetizer",
             "price": 3.00,
             "calorie": 260,            
@@ -110,7 +110,7 @@
         },
 
         {
-            "name": "Fried Moarella",
+            "name": "Fried Mozarella",
             "type": "Appetizer",
             "price": 3.00,
             "calorie": 260,            
