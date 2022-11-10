@@ -4,9 +4,6 @@ $username = $_POST['username'];
 
 $password = $_POST['password'];
 
-echo $username;
-echo $password;
-
 // database connection
 
 $con = new mysqli("localhost","root","","foodorder");
