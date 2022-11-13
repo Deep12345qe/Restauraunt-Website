@@ -1,0 +1,26 @@
+Attendants - Cesar Barajas, David Luna, Russel Tapia
+
+Goals:
+Report 2
+- Mostly finished
+- add references to any important documantation to avoid plagerism. 
+
+Demo 2
+-We want to demonstrate a registration page, a login page, and a menu page in that order.
+- register a new user, use new user credentials, and show off the menu.
+
+Coding
+- menu, revamp to no longer rely on database for data retrieval. Too labor and computing
+intensive
+- Registration form, needs to be created and linked to database.
+
+-Page transitions: href
+example:
+//button that takes you to google
+<a href = "www.google.com">
+// button html code
+</a>
+
+//webpage that includes hyperlink to index
+<a href="index.html"> Click here for index </a>
+href html 
