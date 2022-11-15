@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $email = $_POST['email'];
 
@@ -19,11 +20,17 @@ if($con->connect_error) {
 		$data = $stmt_result->fetch_assoc();
 		if($data['password'] === $password){
 			echo "<h2>Login Successfully</h2>";
+			header('Location:/main.php?Login_successfull');
+			$username = $data['username'];
+			$_SESSION['username'] = $username;
+		
 	} else {
 		echo "<h2>Invalid email or password</h2>";
+			header('Location:/index.html?msg=Login_failed');
 	}
 } else {
-    echo "<h2>Invalid email or password</h2>";    
+    echo "<h2>Invalid email or password</h2>";
+			header('Location:/index.html?msg=Login_failed');			   
 }
 }
 ?>

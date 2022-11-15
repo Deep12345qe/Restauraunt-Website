@@ -174,4 +174,3 @@ session_start();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
 <script src="src/slider.js"></script>
 </html>
-    
