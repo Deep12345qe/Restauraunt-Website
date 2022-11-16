@@ -52,11 +52,15 @@ body {
 }
 
 h1 {
+  position: relative;
+  bottom: 40px;
   font-size: 24px;
   font-weight: 500;
 }
 
 p {
+  position: relative;
+  bottom: 40px;
   font-size: 14px;
 }
 
@@ -91,31 +95,7 @@ input:focus {
   border-color: #6236ff;
 }
 
-.label {
-  display: flex;
-  position: absolute;
-  height: 100%;
-  align-items: center;
-  transition: 300ms ease;
-}
 
-label {
-  display: block;
-  font-size: 14px;
-  color: #b0b0b0;
-}
-
-/* Label Effect */
-input:focus + .label,
-input:not(:placeholder-shown) + .label {
-  transform: translateY(-27px);
-}
-
-input:focus + .label label,
-input:not(:placeholder-shown) + .label label {
-  font-weight: 500;
-  color: initial;
-}
 
 button {
   padding: 12px 18px;
