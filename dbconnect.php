@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+unset($_SESSION['username']);
 $email = $_POST['email'];
 
 $password = $_POST['password'];
