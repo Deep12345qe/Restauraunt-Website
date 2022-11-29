@@ -46,7 +46,8 @@ session_start();
 <body>
     <div class="swiper-container entree">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <!-- We need to add the Id text to be able to use the class and it's attributes -->
+            <div class="swiper-slide" id = "burrito">
                 <!-- <h1>Slide 1</h1> -->
                   <img class="card-image" src="img/burrito.jpg" />
                   <div class="card-columns">
@@ -98,7 +99,7 @@ session_start();
         <div class="swiper-button-next"></div>
         <div class="swiper-scrollbar"></div>
     </div>
-    
+    <!-- End of first slider, Entree -->
     <div class="swiper-container appetizer">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -122,7 +123,7 @@ session_start();
         <div class="swiper-button-next"></div>
         <div class="swiper-scrollbar"></div>
     </div>
-
+    <!-- End of Second slider, appetizer -->
     <div class="swiper-container dessert">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -146,7 +147,7 @@ session_start();
         <div class="swiper-button-next"></div>
         <div class="swiper-scrollbar"></div>
     </div>
-    
+     <!-- End of third slider, Dessert-->
     <div class="swiper-container beverage">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -170,6 +171,12 @@ session_start();
         <div class="swiper-button-next"></div>
         <div class="swiper-scrollbar"></div>
     </div>
+     <!-- End of fouth slider, Drinks -->
+     <div class = "Cart" id="Cart"> 
+
+
+     
+     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
 <script src="src/slider.js"></script>
