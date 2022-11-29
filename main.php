@@ -9,8 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -44,133 +43,43 @@ session_start();
     
 </header>
 <body>
-    <div class="swiper-container entree">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <!-- <h1>Slide 1</h1> -->
-                  <img class="card-image" src="img/burrito.jpg" />
-                  <div class="card-columns">
-                    <div class="cals text-left">750 Cals</div>
-                    <div class="card-name text-center">Burrito</div>
-                    <div class="price text-right">$4.99</div>
-                  </div>
+    <div class="products-list">
+        <div>
+            <!-- <h1>Entree</h1> -->
+            <div class="entreeContainer">
+                <!-- render entree here -->
             </div>
+        </div>
 
-            <div class="swiper-slide">
-                <!-- <h1>Slide 2</h1> -->
-                <img class="card-image" src="img/fajitas.jpg" />
-                <div class="card-columns">
-                  <div class="cals text-left">750 Cals</div>
-                  <div class="card-name text-center">Fajitas</div>
-                  <div class="price text-right">$4.99</div>
-                </div>
+        <div class="cart">
+            <div class="cart-header">
+                <div class="column1">Item</div>
+                <div class="column2">Unit price</div>
+                <div class="column3">Units</div>
             </div>
-            <div class="swiper-slide">
-                <!-- <h1>Slide 3</h1> -->
-                <img class="card-image" src="img/enchilada.jpg" />
-                <div class="card-columns">
-                  <div class="cals text-left">750 Cals</div>
-                  <div class="card-name text-center">Enchiladas</div>
-                  <div class="price text-right">$4.99</div>
-                </div>
+            <div class="cart-items">
+                <!-- render cart items here -->
             </div>
-            <div class="swiper-slide">
-                <!-- <h1>Slide 3</h1> -->
-                <img class="card-image" src="img/chile verde.jpg" />
-                <div class="card-columns">
-                  <div class="cals text-left">750 Cals</div>
-                  <div class="card-name text-center">Chile Verde</div>
-                  <div class="price text-right">$4.99</div>
+            <div class="cart-footer">
+                <div class="subtotal">
+                    Subtotal (0 items): $0
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <!-- <h1>Slide 3</h1> -->
-                <img class="card-image" src="img/taco.jpg" />
-                <div class="card-columns">
-                  <div class="cals text-left">750 Cals</div>
-                  <div class="card-name text-center">Taco</div>
-                  <div class="price text-right">$4.99</div>
+                <div class="checkout">
+                    Proceed to checkout
                 </div>
             </div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
-    </div>
-    
-    <div class="swiper-container appetizer">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <!-- <h1>Slide 1</h1> -->
-                  <img class="card-image" src="img/nacho.jpg" />
-                  <div class="card-columns">
-                    <div class="cals text-left">750 Cals</div>
-                    <div class="card-name text-center">Nachos</div>
-                    <div class="price text-right">$4.99</div>
-                  </div>
-            </div>
-            <div class="swiper-slide">
-                <h1>Slide 2</h1>
-            </div>
-            <div class="swiper-slide">
-                <h1>Slide 3</h1>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
     </div>
 
-    <div class="swiper-container dessert">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <!-- <h1>Slide 1</h1> -->
-                  <img class="card-image" src="img/churros.jpg" />
-                  <div class="card-columns">
-                    <div class="cals text-left">750 Cals</div>
-                    <div class="card-name text-center">Churros</div>
-                    <div class="price text-right">$4.99</div>
-                  </div>
-            </div>
-            <div class="swiper-slide">
-                <h1>Slide 2</h1>
-            </div>
-            <div class="swiper-slide">
-                <h1>Slide 3</h1>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
-    </div>
-    
-    <div class="swiper-container beverage">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <!-- <h1>Slide 1</h1> -->
-                  <img class="card-image" src="img/margarita.jpg" />
-                  <div class="card-columns">
-                    <div class="cals text-left">750 Cals</div>
-                    <div class="card-name text-center">Margarita</div>
-                    <div class="price text-right">$4.99</div>
-                  </div>
-            </div>
-            <div class="swiper-slide">
-                <h1>Slide 2</h1>
-            </div>
-            <div class="swiper-slide">
-                <h1>Slide 3</h1>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
-    </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
-<script src="src/slider.js"></script>
+<script>
+    const porductsListEl = document.querySelector(".products-list");
+    const seeMoreBtn = document.querySelector(".see-more-btn");
+
+    seeMoreBtn.addEventListener('click', () => {
+        porductsListEl.scrollIntoView({behavior: "smooth"})
+    })
+</script>
+<script src="src/menu.js"></script>
+<script src="src/app.js"></script>
 </html>
