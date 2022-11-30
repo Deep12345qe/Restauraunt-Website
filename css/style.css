@@ -1,6 +1,6 @@
 body {
   padding: 0px;
-  margin: 90px;
+  margin: 0;
   background-color: #57b64f;
   position: relative;
 }
@@ -260,8 +260,8 @@ a {
 .entreeContainer {
   height: 50px;
   width: 75%;
-  margin: 0px;
-  padding: 0px;
+  margin: 10px;
+  padding: 10px;
   display: grid;
   grid-template-rows: 5fr 5fr;
   grid-template-columns: repeat(5, 1fr);

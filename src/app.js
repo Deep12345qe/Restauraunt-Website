@@ -14,10 +14,12 @@ const filteredEntree = food.filter((item) => {
     return item.category == "Entree";
 });
 
-console.log(filteredEntree);
+//console.log(filteredEntree);
 
+//select entree element
+const foodElem = document.querySelector(".testContainer");
 
-
+//const entrees = document.querySelector(".swiper-container");
 
 function renderMenuObj(filteredItem) {
     filteredItem.forEach((Food) => {
@@ -56,34 +58,32 @@ const filteredAppetizer = food.filter((item) => {
     return item.category == "Appetizer";
 });
 
-//console.log(filteredAppetizer);
+console.log(filteredAppetizer);
 
 const filteredDessert = food.filter((item) => {
     return item.category == "Dessert";
 });
 
-//console.log(filteredDessert);
+console.log(filteredDessert);
 
 
 const filteredDrink = food.filter((item) => {
     return item.category == "Drinks";
 });
 
-//console.log(filteredDrink);
+console.log(filteredDrink);
 
-//renderMenuObj();
 
 //renderMenuObj(filteredEntree);
-//enderMenuObj(filteredAppetizer);
+//renderMenuObj(filteredAppetizer);
 //renderMenuObj(filteredDessert);
+//renderMenuObj(filteredDrink);
+
 renderMenuObj(food);
 
 
+//not complete
 
-    // console.log(menu)
-    
-
-    // cart array
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
 

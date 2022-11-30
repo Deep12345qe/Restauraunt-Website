@@ -51,7 +51,6 @@ session_start();
             </div>
         </div>
 
-
         <div class="cart">
             <div class="cart-header">
                 <div class="column1">Item</div>
@@ -73,6 +72,14 @@ session_start();
     </div>
 
 </body>
+<script>
+    const porductsListEl = document.querySelector(".products-list");
+    const seeMoreBtn = document.querySelector(".see-more-btn");
+
+    seeMoreBtn.addEventListener('click', () => {
+        porductsListEl.scrollIntoView({behavior: "smooth"})
+    })
+</script>
 <script src="src/menu.js"></script>
 <script src="src/app.js"></script>
 </html>
