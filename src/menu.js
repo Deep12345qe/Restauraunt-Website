@@ -1,45 +1,3 @@
-// class Entre{
-//     constructor(name, price) {
-//         this.name = name;
-//         this.price = price;
-//     }
-// }
-
-// class Side{
-//     constructor(name, price) {
-//         this.name = name;
-//         this.price = price;
-//     }
-// }
-
-// class Beverage{
-//     constructor(name, price) {
-//         this.name = name;
-//         this.price = price;
-//     }
-// }
-
-// class Food {
-//     constructor(name, price, type, calorie, description){
-//         this.name = name;
-//         this.price = price;
-//         this.type = type;
-//         this.calorie = calorie;
-//         this.description =  description;
-//     }
-// }
-
-// class Combo {
-//     constructor(entre, side, beverage){
-//         this.entre = entre;
-//         this.side = side;
-//         this.beverage = beverage;
-//     }
-
-//     function comboPrice(entre, side, beverage) {
-//         return entre.price + side.price + beverage.price;
-//     }
-// }
 
 
 const food =      [
@@ -76,7 +34,7 @@ const food =      [
     },
 
     {
-        name: "Tostada de ceviche", category: "Appetizer", price: 3.00, calorie: 260, qty: "N/A", description: { side: ["Choice of fish or shrimp"], flavor: "N/A" }, imgSrc: "img/shrimp.jpg",
+        name: "Tostada de ceviche", category: "Appetizer", price: 3.00, calorie: 260, qty: "N/A", description: { side: ["Choice of fish or shrimp"], flavor: "N/A" }, imgSrc: "img/ceviche.jpg",
     },
 
     {
@@ -108,7 +66,7 @@ const food =      [
     },
 
     {
-        name: "Soda", category: "Drinks", price: 2.00, calorie: 120, qty: 1, description: { side: "N/A", flavor: ["Various"] }, imgSrc: "img/Soda.jpg",
+        name: "Soda", category: "Drinks", price: 2.00, calorie: 120, qty: 1, description: { side: "N/A", flavor: ["Various"] }, imgSrc: "img/cola.jpg",
     },
 
     {
@@ -123,94 +81,3 @@ const food =      [
         name: "Horchata", category: "Drinks", price: 2.00, calorie: 120, qty: 1, description: { side: "N/A", flavor: [""] }, imgSrc: "img/horchata.jpg",
     }
 ]
-
-
-
-
-const filteredEntree = food.filter((item) => {
-    return item.category == "Entree";
-});
-
-//console.log(filteredEntree);
-
-//select entree element
-const entrees = document.querySelector(".swiper-container");
-
-function renderMenuObj(filtered) {
-    filtered.forEach((Food) => {
-        entrees.innerHTML += `
- 
-            <div class="swiper-wrapper ${Food.category}">
-                <div class="swiper-slide">
-                <img class="card-image" src="${Food.imgSrc}" alt="${Food.name}">
-                    <div class="card-columns">
-                        <div class="cals text-left">Calories ${Food.calorie}</div>
-                        <div id="food-name" class="text-center">${Food.name}</div>
-                        <div class="price text-right">$ ${Food.price}</div>
-                    </div>
-                 </div>
-            </div>
-
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-scrollbar"></div>
-
-        `
-        let slider = new Swiper ('.swiper-slide', {
-            effect: 'slide',
-            
-            pagination: {
-              el: '.swiper-pagination',
-            },
-            
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-          
-            scrollbar: {
-              el: '.swiper-scrollbar',
-            },
-          });
-
-    })
-}
-
-
-
-
-
-
-
-
-const filteredAppetizer = food.filter((item) => {
-    return item.category == "Appetizer";
-});
-
-console.log(filteredAppetizer);
-
-const filteredDessert = food.filter((item) => {
-    return item.category == "Dessert";
-});
-
-console.log(filteredDessert);
-
-
-const filteredDrink = food.filter((item) => {
-    return item.category == "Drinks";
-});
-
-console.log(filteredDrink);
-
-
-renderMenuObj(filteredEntree);
-renderMenuObj(filteredAppetizer);
-renderMenuObj(filteredDessert);
-renderMenuObj(filteredDrink);
-
-
-
-    // console.log(menu)
-    
-    //from this menu I need to pull out all food that has a category of "Entree", "Appetizer", "Drinks", and "Deserts"
