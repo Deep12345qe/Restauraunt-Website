@@ -1,45 +1,4 @@
-// class Entre{
-//     constructor(name, price) {
-//         this.name = name;
-//         this.price = price;
-//     }
-// }
 
-// class Side{
-//     constructor(name, price) {
-//         this.name = name;
-//         this.price = price;
-//     }
-// }
-
-// class Beverage{
-//     constructor(name, price) {
-//         this.name = name;
-//         this.price = price;
-//     }
-// }
-
-// class Food {
-//     constructor(name, price, type, calorie, description){
-//         this.name = name;
-//         this.price = price;
-//         this.type = type;
-//         this.calorie = calorie;
-//         this.description =  description;
-//     }
-// }
-
-// class Combo {
-//     constructor(entre, side, beverage){
-//         this.entre = entre;
-//         this.side = side;
-//         this.beverage = beverage;
-//     }
-
-//     function comboPrice(entre, side, beverage) {
-//         return entre.price + side.price + beverage.price;
-//     }
-// }
 
 
 const entreeEl = document.querySelector(".entreeContainer");
@@ -123,15 +82,6 @@ renderMenuObj(food);
 
     // console.log(menu)
     
-    //from this menu I need to pull out all food that has a category of "Entree", "Appetizer", "Drinks", and "Deserts"
-
-
-    //testing template literals
-    // const foodElem = document.querySelector(".testContainer");
-
-    // function renderFoodElem() {
-    //     filteredEntree
-    // }
 
     // cart array
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
