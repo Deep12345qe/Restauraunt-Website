@@ -20,7 +20,7 @@ if($con->connect_error) {
 		$data = $stmt_result->fetch_assoc();
 		if($data['password'] === $password){
 			echo "<h2>Login Successfully</h2>";
-			header('Location:/main.php?Login_successfull');
+			header('Location:/main.html?Login_successfull');
 			$username = $data['username'];
 			$_SESSION['username'] = $username;
 		
