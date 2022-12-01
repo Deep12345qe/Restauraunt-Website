@@ -79,5 +79,8 @@ const food =      [
 
     {
         name: "Horchata", category: "Drinks", price: 2.00, calorie: 120, qty: 1, description: { side: "N/A", flavor: [""] }, imgSrc: "img/horchata.jpg",
-    }
+    },
+    {
+        name: "Beer", category: "Drinks", price: 5.00, calorie: 200, qty: 1, description: { side: "N/A", flavor: ["Modelo", "Modelo Negro"] }, imgSrc: "img/beer.jpg",
+    },
 ]
