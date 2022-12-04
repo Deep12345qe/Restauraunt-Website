@@ -52,7 +52,7 @@ INSERT INTO `food_items` (`food_id`, `food_name`, `food_category`, `food_price`,
 (8, 'Taquitos', 'Appetizer', '3.00', 220, 'rolled fried tortilla with shredden chicken, salsa', './img/Taquitos.jpg');
 (9, 'Tostada de Ceviche', 'Appetizer', '4.99', 170, 'shrimp or fish on top of tostada, with pico de gallo, lime juice, cilantro', './img/ceviche.jpg');
 (10, 'Fried Mozarella', 'Appetizer', '3.00', 290, 'Mozarella sticks fried, served with ranch', './img/Mozarella.jpg');
-(11 'Churros', 'Dessert', '2.50', 450, 'Fried beer batter sticks coated with sugar', './img/churros.jpg');
+(11, 'Churros', 'Dessert', '2.50', 450, 'Fried beer batter sticks coated with sugar', './img/churros.jpg');
 (12, 'Cheesecake', 'Dessert', '5.99', 400, 'homeade cheesecake, with strawberry puree', './img/cheesecake.jpg');
 (13, 'Flan', 'Dessert', '5.00', 300, 'homeade mexican style flan', './img/flan.jpg');
 (14, 'Shakes', 'Dessert', '4.99', 500, 'choice of strawberry, chocolate, vanilla ', ',/img/shakes.jpg');
