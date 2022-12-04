@@ -2,7 +2,6 @@
 
 
 const entreeEl = document.querySelector(".entreeContainer");
-const productsEl = document.querySelector(".products");
 const cartItemsEl = document.querySelector(".cart-items");
 const subtotalEl = document.querySelector(".subtotal");
 const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
@@ -15,44 +14,6 @@ const filteredEntree = food.filter((item) => {
 });
 
 //console.log(filteredEntree);
-
-//select entree element
-const foodElem = document.querySelector(".testContainer");
-
-//const entrees = document.querySelector(".swiper-container");
-
-function renderMenuObj(filteredItem) {
-    filteredItem.forEach((Food) => {
-        entreeEl.innerHTML += `
-            
-            <div class="item">
-                <div class="item-container">
-                    <div class="item-img">
-                        <img class="card-image" src="${Food.imgSrc}" alt="${Food.name}">
-                    </div>
-                    <div class="desc">
-                        <div class="cals text-left">Calories ${Food.calorie}</div>
-                        <div class="price text-right">$ ${Food.price}</div>
-                        <div id="food-name" class="text-center">${Food.name}</div>
-                    </div>
-                    <div class="add-to-cart" onclick="addToCart(${Food.name})">
-                        <img src="./img/plus.png" alt="add to cart">
-                    </div>
-                </div>
-            </div>
-            
-        `;
-
-
-    });
-}
-
-
-
-
-
-
-
 
 const filteredAppetizer = food.filter((item) => {
     return item.category == "Appetizer";
@@ -72,34 +33,55 @@ const filteredDrink = food.filter((item) => {
 });
 
 console.log(filteredDrink);
-
-
 //renderMenuObj(filteredEntree);
 //renderMenuObj(filteredAppetizer);
 //renderMenuObj(filteredDessert);
 //renderMenuObj(filteredDrink);
 
+function renderMenuObj(filteredItem) {
+    filteredItem.forEach((Food) => {
+        entreeEl.innerHTML += `
+            
+            <div class="item">
+                <div class="item-container">
+                    <div class="item-img">
+                        <img class="card-image" src="${Food.imgSrc}" alt="${Food.name}">
+                    </div>
+                    <div class="desc">
+                        <div class="cals text-left">Calories ${Food.calorie}</div>
+                        <div class="price text-right">$ ${Food.price}</div>
+                        <div id="food-name" class="text-center">${Food.name}</div>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(${Food.id})">
+                        <img src="./img/plus.png" alt="add to cart">
+                    </div>
+                </div>
+            </div>
+            
+        `;
+
+
+    });
+}
+
 renderMenuObj(food);
 
 
-//not complete
 
+//create cart array
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
 
 // ADD TO CART
 function addToCart(id) {
-  // check if prodcut already exist in cart
-  if (cart.some((item) => item.id === id)) {
-    changeNumberOfUnits("plus", id);
-  } else {
-    const item = products.find((product) => product.id === id);
+
+    const item = food.find((product) => product.id === id);
 
     cart.push({
       ...item,
       numberOfUnits: 1,
     });
-  }
+  
 
   updateCart();
 }
@@ -120,7 +102,7 @@ function renderSubtotal() {
 
   cart.forEach((item) => {
     totalPrice += item.price * item.numberOfUnits;
-    totalItems += item.numberOfUnits;
+    totalItems += 1;
   });
 
   subtotalEl.innerHTML = `Subtotal (${totalItems} items): $${totalPrice.toFixed(2)}`;
@@ -165,7 +147,7 @@ function changeNumberOfUnits(action, id) {
     if (item.id === id) {
       if (action === "minus" && numberOfUnits > 1) {
         numberOfUnits--;
-      } else if (action === "plus" && numberOfUnits < item.instock) {
+      } else if (action === "plus" && numberOfUnits) {
         numberOfUnits++;
       }
     }
