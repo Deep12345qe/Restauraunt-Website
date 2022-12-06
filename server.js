@@ -1,25 +1,77 @@
+
+
 const express = require('express');
 const mysql = require('mysql2');
 const app = express();
-const port = 8383;
+const cors = require('cors');
+const dotenv = require('dotenv');
+// const port = 8383;
+// const host = 'localhost';
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + 'public'));
+app.use(express.urlencoded({ extended : false }));
 app.use(express.json());
+app.use(cors());
 
-// app.get('/:dynamic', (req, res) => {
-//     const { dynamic } = req.params;
-//     const { itemsOrdered} = req.query;
-//     console.log(dynamic);
-//     res.status(200).send();
-// })
+// create
+app.post('/insert', (request, response) => {
+    const { name } = request.body;
+    const db = dbService.getDbServiceInstance();
+    
+    const result = db.insertNewName(name);
 
-// app.post('/', (reg, res) => {
-//     const { parcel } = req.body;
-//     console.log(parcel)
-//     if (!parcel) {
-//         return res.status(400).send({ status: 'failed'})
-//     }
-//     res.status(200).send({ status: 'received '})
-// })
+    result
+    .then(data => response.json({ data: data}))
+    .catch(err => console.log(err));
+});
 
-app.listen(port, () => console.log(`Server has started on port: ${port}`));
+// read
+app.get('/getAll', (request, response) => {
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.getAllData();
+    
+    result
+    .then(data => response.json({data : data}))
+    .catch(err => console.log(err));
+})
+
+// update
+app.patch('/update', (request, response) => {
+    const { id, name } = request.body;
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.updateNameById(id, name);
+    
+    result
+    .then(data => response.json({success : data}))
+    .catch(err => console.log(err));
+});
+
+// delete
+app.delete('/delete/:id', (request, response) => {
+    const { id } = request.params;
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.deleteRowById(id);
+    
+    result
+    .then(data => response.json({success : data}))
+    .catch(err => console.log(err));
+});
+
+app.get('/search/:name', (request, response) => {
+    const { name } = request.params;
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.searchByName(name);
+    
+    result
+    .then(data => response.json({data : data}))
+    .catch(err => console.log(err));
+})
+
+app.listen(process.env.PORT, () => console.log('app is running'));
+
+
+//app.listen(port, () => console.log(`Server has started on port: ${port}`));
