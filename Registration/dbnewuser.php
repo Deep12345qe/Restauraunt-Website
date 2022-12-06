@@ -1,4 +1,6 @@
 <?php
+// Authored by Cesar Barajas. 
+// Debugged by: Russell Tapia, David Luna, Deep Walia.
 $username = $_POST['username'];
 
 $email = $_POST['email'];

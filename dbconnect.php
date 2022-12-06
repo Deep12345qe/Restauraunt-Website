@@ -1,3 +1,5 @@
+/* Author: Cesar
+   Debugged: Deep */
 <?php
 session_start();
 unset($_SESSION['username']);
