@@ -1,8 +1,28 @@
 
-const port = 8000;
+const mysql = require('mysql2');
 const express = require('express');
-const { appendFile } = require('fs');
+//const { appendFile } = require('fs');
+const sequelize = require("../database");
+const Menu = require("./Models/menu");
+const User = require("./Models/user");
 
+
+
+//sync to database
+sequelize
+  .sync({force: true})
+  // .sync()
+  .then(result => {
+    console.log(result);
+  })
+  .catch((err) => {
+  console.log(err);
+});
+
+
+
+
+/////////API format///////////
 //app.METHOD(PATH, HANDLER);
 // app.get('/', function (req, res) {
 //       res.json('this is the response')
@@ -24,23 +44,23 @@ const { appendFile } = require('fs');
 //   .catch(err => console.log(err))
 // might need cors package to use this fetch API (npm install cors)
 
-const urlBackEnd = 'http://localhost:8383'
-const urlDb = 'http://localhost'
+// const urlBackEnd = 'http://localhost:8383'
+// const urlDb = 'http://localhost'
 
-async function getInfo(e) {
-  e.preventDefault()
-  const res = await fetch(urlBackend + 'All', {
-    method: 'GET'
-  })
-  console.log(res)
-  const data = await res.json()
-  input.value = data  //might have to add dot property
+// async function getInfo(e) {
+//   e.preventDefault()
+//   const res = await fetch(urlBackend + 'All', {
+//     method: 'GET'
+//   })
+//   console.log(res)
+//   const data = await res.json()
+//   input.value = data  //might have to add dot property
 
-}
+// }
 
 // async function postInfo(e) {
 //   e.preventDefault()
-if (input.value == '') {return}
+//if (input.value == '') {return}
 //   const res = await fetch(urlBackEnd + 'All', {
 //     method: 'POST'
         // headers: {

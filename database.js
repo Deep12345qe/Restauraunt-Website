@@ -1,15 +1,68 @@
-const mysql = require('mysql2');
-const dotenv = require('dotenv');
-let instance = null;
-dotenv.config();
 
-const connection = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE,
-    port: process.env.DB_PORT
+
+
+
+
+let instance = null;
+
+const sequelize = require("../database");
+const Menu = require("./Models/menu");
+const User = require("./Models/user");
+
+
+//sync to database
+sequelize
+  .sync({force: true})
+  // .sync()
+  .then(result => {
+    console.log(result);
+  })
+  .catch((err) => {
+  console.log(err);
 });
+
+//const { Sequelize } = require('sequelize');
+
+const Sequelize = require("sequelize");
+
+
+
+////sequelize constructor to connect to the database
+const food = new Sequelize("food", "root", "", {
+    dialect: "mysql",
+    host: "localhost",
+});
+
+const foodorder = new Sequelize("foodorder", "root", "", {
+    dialect: "mysql",
+    host: "localhost",
+});
+
+//sync to database
+// sequelize
+//   .sync({force: true})
+//   // .sync()
+//   .then(result => {
+//     console.log(result);
+
+//   })
+//   .catch((err) => {
+//   console.log(err);
+// });
+
+
+// try {
+//     await sequelize.authenticate();
+//     console.log('Connection has been established successfully.');
+//   } catch (error) {
+//     console.error('Unable to connect to the database:', error);
+//   }
+// module.exports = sequelize;
+
+
+
+
+
 
 connection.connect((err) => {
     if (err) {
