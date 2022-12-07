@@ -11,7 +11,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema FoodOrder
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `FoodOrder` DEFAULT CHARACTER SET utf8 ;
+CREATE DATABASE IF NOT EXISTS `FoodOrder` DEFAULT CHARACTER SET utf8 ;
 USE `FoodOrder` ;
 
 -- -----------------------------------------------------
@@ -19,7 +19,7 @@ USE `FoodOrder` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `FoodOrder`.`user` (
   `username` VARCHAR(16) NOT NULL,
-  `email` VARCHAR(150) NOT NULL,
+  `email` VARCHAR(150) UNIQUE NOT NULL,
   `password` VARCHAR(32) NOT NULL,
   `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UserID` INT(9) NOT NULL AUTO_INCREMENT,
