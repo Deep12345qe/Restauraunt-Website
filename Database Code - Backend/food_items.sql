@@ -26,6 +26,9 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `food_items`
 --
+--/written by DavidL
+--/tested by David L
+--/debugged by David L
 
 CREATE TABLE `food_items` (
   `food_id` int(3) NOT NULL,
