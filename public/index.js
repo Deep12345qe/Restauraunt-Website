@@ -1,4 +1,6 @@
-
+//written by Russell
+//tested by Russell
+//debugged by Russell
 
 const entreeEl = document.querySelector(".entreeContainer");
 const cartItemsEl = document.querySelector(".cart-items");

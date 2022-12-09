@@ -1,4 +1,8 @@
-// Author = Russell
+//written by Russell
+//tested by Russell
+//debugged by Russell
+
+
 // This section was never used
 // It was intended to a class for users once database was up and running
 // however since we had database issue we were never able to implement this part.

@@ -1,10 +1,11 @@
-<<<<<<< HEAD
-//  Author = Russell
-// a huge object array of food used as a temporary storage of menu Data until dastabase connection have been stablished.
+
 =======
 //written by David and Russel
 //tested by David and Russel
 //debugged by David and Russel
+
+
+// a huge object array of food used as a temporary storage of menu Data until dastabase connection have been stablished.
 >>>>>>> 090fe7168d65712fdff02ca0c758fbecaf3a07ac
 
 const food =      [

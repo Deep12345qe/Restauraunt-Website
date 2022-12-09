@@ -1,3 +1,9 @@
+//written by Russell
+//tested by Russell
+//debugged by Russell
+
+//not used same as main.js
+
 
 //making variables that allows dom manipulations
 const entreeEl = document.querySelector(".entreeContainer");
