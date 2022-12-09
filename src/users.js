@@ -1,3 +1,12 @@
+// Author = Russell
+// This section was never used
+// It was intended to a class for users once database was up and running
+// however since we had database issue we were never able to implement this part.
+
+
+
+
+
 // const User = function (name, email) {
 //     this.name = name;
 //     this.email = email;

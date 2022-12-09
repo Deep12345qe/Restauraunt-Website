@@ -1,4 +1,4 @@
-
+//Author = Russell
 
 const express = require('express');
 const mysql = require('mysql2');
@@ -16,13 +16,7 @@ const port = 8383;
 
 
 
-// const host = 'localhost';
-
-// app.use(express.static(__dirname + 'public'));
-// app.use(express.urlencoded({ extended : false }));
-// app.use(express.json());
-// app.use(cors());
-
+// Another API for handling CRUD operations (again this is untested)
 // create
 app.post('/insert', (request, response) => {
     const { name } = request.body;
@@ -71,6 +65,8 @@ app.delete('/delete/:id', (request, response) => {
     .catch(err => console.log(err));
 });
 
+
+//Search
 app.get('/search/:name', (request, response) => {
     const { name } = request.params;
     const db = dbService.getDbServiceInstance();
@@ -82,7 +78,7 @@ app.get('/search/:name', (request, response) => {
     .catch(err => console.log(err));
 })
 
-//app.listen(process.env.PORT, () => console.log('app is running'));
 
 
+//Opening a port to be able to connect to the server
 app.listen(port, () => console.log(`Server has started on port: ${port}`));

@@ -1,4 +1,5 @@
-
+//  Author = Russell
+// a huge object array of food used as a temporary storage of menu Data until dastabase connection have been stablished.
 
 const food =      [
     {

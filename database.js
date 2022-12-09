@@ -1,4 +1,4 @@
-
+// Author = Russell
 
 
 
@@ -27,39 +27,18 @@ const Sequelize = require("sequelize");
 
 
 
-////sequelize constructor to connect to the database
+////sequelize constructor to connect to food database
 const food = new Sequelize("food", "root", "", {
     dialect: "mysql",
     host: "localhost",
 });
 
+
+////sequelize constructor to connect to foodorder database
 const foodorder = new Sequelize("foodorder", "root", "", {
     dialect: "mysql",
     host: "localhost",
 });
-
-//sync to database
-// sequelize
-//   .sync({force: true})
-//   // .sync()
-//   .then(result => {
-//     console.log(result);
-
-//   })
-//   .catch((err) => {
-//   console.log(err);
-// });
-
-
-// try {
-//     await sequelize.authenticate();
-//     console.log('Connection has been established successfully.');
-//   } catch (error) {
-//     console.error('Unable to connect to the database:', error);
-//   }
-// module.exports = sequelize;
-
-
 
 
 
@@ -71,7 +50,7 @@ connection.connect((err) => {
     // console.log('db ' + connection.state);
 });
 
-
+//API class
 class DbService {
     static getDbServiceInstance() {
         return instance ? instance : new DbService();

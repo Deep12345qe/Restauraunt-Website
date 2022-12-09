@@ -1,12 +1,12 @@
 
-
+//making variables that allows dom manipulations
 const entreeEl = document.querySelector(".entreeContainer");
 const cartItemsEl = document.querySelector(".cart-items");
 const subtotalEl = document.querySelector(".subtotal");
 const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
 
 
-
+//Function that pulls all the food data from /src/menu.js
 function renderMenuObj() {
     filteredItem.forEach((Food) => {
         entreeEl.innerHTML += `

@@ -1,3 +1,7 @@
+// Author = Russell
+
+
+//Get required modules
 const mysql = require('mysql2');
 let instance = null;
 
@@ -21,19 +25,15 @@ const connection = mysql.createPool({
 module.export = connection;
 
 
-//connection.execute((err) => {
-//     if (err) {
-//         console.log(err.message);
-//     }
-
-//     console.log();
-// });
 
 let sql = "SELECT * FROM food_items;";
 
 let food = [{}];
 // ///////////////////////////////////////////here is the working connection for the food items
 
+
+//also connect to database
+//but I wanted to pull the data at the same time
 connection.execute(sql, function (err, result) {
     if (err) throw err;
 
@@ -49,7 +49,9 @@ connection.execute(sql, function (err, result) {
 
 
 
-
+//a class API  for CRUD operation
+// but since I was not able to get past the menu being undefined
+//I did not get the chance if the following codes below works.
 class DbService {
     static getDbServiceInstance() {
         return instance ? instance : new DbService();

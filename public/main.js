@@ -1,3 +1,8 @@
+// Author = Russell
+
+
+
+
 
 const mysql = require('mysql2');
 const express = require('express');
@@ -9,6 +14,7 @@ const User = require("./Models/user");
 
 
 //sync to database
+//This function connects node.js backend to the database using sequelize module
 sequelize
   .sync({force: true})
   // .sync()
@@ -22,60 +28,7 @@ sequelize
 
 
 
-/////////API format///////////
-//app.METHOD(PATH, HANDLER);
-// app.get('/', function (req, res) {
-//       res.json('this is the response')
-// })        //get data
-// app.post()           //add data
-// app.put()            // edit 
-// app.delete()
 
-
-//const order = document.querySelector('')
-
-// fetch('put in url here')
-//   .then(response => response.json())
-//   .then(data => {
-//     data.forEach(food => {
-//       const ID = 
-//     })//console.log(data))        //chaining methods
-//   }
-//   .catch(err => console.log(err))
-// might need cors package to use this fetch API (npm install cors)
-
-// const urlBackEnd = 'http://localhost:8383'
-// const urlDb = 'http://localhost'
-
-// async function getInfo(e) {
-//   e.preventDefault()
-//   const res = await fetch(urlBackend + 'All', {
-//     method: 'GET'
-//   })
-//   console.log(res)
-//   const data = await res.json()
-//   input.value = data  //might have to add dot property
-
-// }
-
-// async function postInfo(e) {
-//   e.preventDefault()
-//if (input.value == '') {return}
-//   const res = await fetch(urlBackEnd + 'All', {
-//     method: 'POST'
-        // headers: {
-        //     "Content-Type": 'application/json'
-        // },
-        // body:JSON.stringify({
-        //   parcel: input.value
-        // })
-
-//   })
-//   console.log(res)
-//   const data = await res.json()
-//   input.value = data  //might have to add dot property
- 
-// }
 
 const entreeEl = document.querySelector(".entreeContainer");
 const cartItemsEl = document.querySelector(".cart-items");
@@ -84,6 +37,10 @@ const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
 
 
 
+//once all data in the menu.js is pulled as a big array of object.
+// that array of objects will be filtered into four smaller array of objects ("Entree", "Appetizer", "Deserts", and "Drinks")
+//However since we abandon slider to render the food images,
+//there is no longer a need for filtering the big array.
 
 const filteredEntree = food.filter((item) => {
     return item.category == "Entree";
@@ -114,6 +71,7 @@ console.log(filteredDrink);
 //renderMenuObj(filteredDessert);
 //renderMenuObj(filteredDrink);
 
+//function to show the food images, food name, price and calories on html page
 function renderMenuObj(filteredItem) {
     filteredItem.forEach((Food) => {
         entreeEl.innerHTML += `
