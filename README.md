@@ -20,6 +20,16 @@ Password: Hangry
 or 
 register as new user.
 
+Unit Testing: For most of our program, the way we get feedback on successful running of the code, we make sure there are either confirmation messages
+in the browser, OR otherwise in ther url. 
+ex: 
+- When logging in to the menu, there will be a login Successful message in the url. 
+- When registering a new user, there will be a registration successful message in the url of the next page, which is index or log in. 
+- simply deleting an 'o' from "root" in dbconnect.php and dbnewuser.php can test connection errors.
+- using a false log in will result an a login error in the url. 
+
+
+
 File Descriptions 
 
 -Index.html: The initial login page 
