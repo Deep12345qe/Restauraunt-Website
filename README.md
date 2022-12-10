@@ -68,5 +68,7 @@ Core files:
 /server.js             //has code to make database to listen to port, also Handles CRUD operation (experimental)
 
 /dbServices.js        //this was created to try to make system work with sequelize module
+/Models/menu.js        //model for menu data table
+/Models/user           //model for user data table intender for workers
 
 
