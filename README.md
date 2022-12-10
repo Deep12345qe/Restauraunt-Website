@@ -1,6 +1,8 @@
 # Restauraunt-Website
 Software Engineering Class - California State University, Stanislaus
 
+<-- Second Demo instance of the project-->
+
 Software used- XAMPP Apache, XAMPP phpmyadmin
 
 How to use Apache and phpmyadmin:
@@ -28,3 +30,43 @@ credentials
 -main.html: Contains the main menu that allows the user to pick and choose food items they wish
 -reg.html: Contains the registration page form
 -dbnewuser.php: Established a connection to the database and queries to add new users, used by reg.html
+
+
+
+
+
+<-- Third Demo instance of the project (with menu not hard coded)-->
+
+Software required on the local machine:
+    XAMPP = Apache and MySQL
+    Node.js = for control of the backend, require the following modules.
+        mysql2
+        express
+        cors
+        sequelize
+        nodemon       //optional, automatically reload node.js console for any changes made (for debugging)
+To install node.js modules:
+    -Install node.js from https://nodejs.org/en/, then open cmd, cd to project folder root ({/Restaurant-Website/public}  in this case) and run the following command.
+
+        npm install express mysql2 cors sequelize
+        npm install --save-dev nodemon
+
+To run the system:
+
+1. Run XAMPP software.
+2. Start Apache and MySQL in XAMPP control panel
+3. Open any browser and type "localhost/public".
+
+Note: Third demo instance of the project was created to work on the menu database without breaking the existing system. This part only deals with the main page and not the login page.
+
+Core files:
+/public/index.html     //Main page
+/public/main.js        //Has the codes for control of the interface
+/public/style.css      //Handles styling of the website
+/public/img/*.jpg      //all images require to render the menus
+/database.js           //has the codes to connect to database and the classes for Crud operation
+/server.js             //has code to make database to listen to port, also Handles CRUD operation (experimental)
+
+/dbServices.js        //this was created to try to make system work with sequelize module
+
+

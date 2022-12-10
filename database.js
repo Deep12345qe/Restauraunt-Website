@@ -1,4 +1,6 @@
-// Author = Russell
+// written by Russell
+// tested by Russell
+// debugged by Russell
 
 
 
