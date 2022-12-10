@@ -72,3 +72,4 @@ Core files:
 /Models/user           //model for user data table intender for workers
 
 
+Testing was done using command 'console.log()' on dev tools of the browser for the interface, on git bash terminal for the server.
